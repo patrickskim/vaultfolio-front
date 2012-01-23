@@ -1,0 +1,208 @@
+/************************************** 
+
+	THE 
+       oooooo.    .oooooo..o  .oooooo..o 
+	 d8P'  `Y8b  d8P'    `Y8 d8P'    `Y8 
+	888          Y88bo.      Y88bo.      
+	888           `"Y8888o.   `"Y8888o.  
+	888               `"Y88b      `"Y88b 
+	`88b    ooo  oo     .d8P oo     .d8P 
+	 `Y8bood8P'  8""88888P'  8""88888P'   v1.0
+
+	the CSS | Standard Pk Package.  			 
+	Base Style and Formating Copyright © 2010 and beyond!
+
+	Author: Patrick Kim. 
+	
+	If you're looking in here, youre the type of person that 
+	looks under the hood and kick the tires. I can apppreciate that.
+
+***************************************/
+
+/* Reset CSS - [credit: Eric Meyer @ meyerweb.com] */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}a{outline:none}table{border-collapse:collapse;border-spacing:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}q:before,q:after{content:''}abbr,acronym,fieldset,img{border:0}html{min-height:100%;height:auto}
+
+/*== Standard Clearfix - [credit: bigjohn design @ positioniseverything.com] ==*/
+	.reset { margin:0; padding:0;	font-weight:400;	text-decoration:none; }
+	.clear { height:0; clear:both;	margin:0;	padding:0;	line-height:0; }
+	.clearfix:after { content: "."; display: block;  height: 0;  clear: both; visibility: hidden;   }
+	
+/*== Custom Classes & Default Settings. ==*/	
+	a {	color:#57c3d2; text-decoration: none; cursor:pointer; }
+	a:hover { text-decoration:underline; cursor:pointer; }
+	a:active {	color:#e0337d; }
+	
+	ul, ol { margin-bottom: 10px; }
+	ul li, ol li { margin-bottom: 5px; }
+	ol li { list-style-type: decimal; margin-left: 20px; }
+	ul.disc li { list-style-type: disc; margin-left: 20px; }
+	ul.circ li { list-style-type: circle; margin-left: 20px; }
+	
+	sup,sub { height: 0; line-height: 1; vertical-align: baseline; position: relative; }
+		sup { bottom: 1ex; }
+		sub { top: .5ex; }
+		
+	hr { border: none; border-top: 1px solid #ccc; clear: both; margin: 10px 0; }	
+
+
+
+/*===== Page Common Lay-Out Colors And All. =====*/	
+body { background: #fff; }
+#container { position: relative; z-index: 1; }
+
+			
+/*===== Typography Common Elements =====
+	See http://www.alistapart.com/articles/howtosizetextincss 
+	Font Base Pixel = 16px 
+	Font Conversion: 16px 0.875 = 14px 
+*/
+
+@font-face { font-family: 'Nimbus Sans';  src:  url('../fonts/Nimbus.ttf') format('truetype'); }
+@font-face { font-family: 'Keep Calm';  src:  url('../fonts/KeepCalm.otf') format('opentype'); }
+
+
+body { font-family:  "Helvetica", "Arial", sans-serif;  font-size: 15px; line-height: 1.5em; color:#636B75; }
+	h1, h2, h3, h4, h5 { color: #3b3d3f; margin: 0 0 15px 0; line-height: 1.7em;  }
+	h1 { font-size: 2.75em; }
+	h2 { font-size: 1.5em; }
+	h3 { font-size: 1.375em; }
+	h4 { font-size: 1.25em; }
+	h5 { font-size: 1em;  }
+	
+	p, ul {	margin: 0 0 15px 0; }
+	ul li { margin: 0 0 5px 0; }
+	strong { font-weight:700; }
+	.wrappable { white-space: pre-line; word-wrap: break-word; width: inherit; }
+
+
+/*===== Shared Common Global Items =====
+	[Potential Candidates for Refactor and breking out into seperate CSS files]
+*/	
+
+
+
+/*===== 
+	Unit Grid System (Fluid Version).
+	Learn more ~ http://www.spry-soft.com/grids/
+	Based on 960 Grid System - http://960.gs/ & 960 Fluid - http://www.designinfluences.com/
+
+	Licensed under GPL and MIT.
+=====*/	
+.container_16 { margin-left: auto; margin-right: auto; width: 960px; }
+	.grid_1,.grid_2,.grid_3,.grid_4,.grid_5,.grid_6,.grid_7,.grid_8,.grid_9,.grid_10,.grid_11,.grid_12,.grid_13,.grid_14,.grid_15, .grid_16
+	{ display: inline; float: left; position: relative; margin-left: 15px; margin-right: 15px; }
+
+
+	/* Grid >> Children (Alpha ~ First, Omega ~ Last) */
+	.alpha { margin-left: 0; }
+	.omega { margin-right: 0; }
+
+	/* Grid >> Force (Force a elements's size but not its positioning) */
+	.force { display: block; float: none; clear: both; }
+
+	/* Grid >> Global */
+	.container_16 .grid_1 { width: 30px; }
+	.container_16 .grid_2 { width: 90px; }
+	.container_16 .grid_3 { width: 150px; }
+	.container_16 .grid_4 { width: 210px; }
+	.container_16 .grid_5 { width: 270px; }
+	.container_16 .grid_6 { width: 330px; }
+	.container_16 .grid_7 { width: 390px; }
+	.container_16 .grid_8 { width: 450px; }
+	.container_16 .grid_9 { width: 510px; }
+	.container_16 .grid_10 { width: 570px; }
+	.container_16 .grid_11 { width: 630px; }
+	.container_16 .grid_12 { width: 690px; }
+	.container_16 .grid_13 { width: 750px; }
+	.container_16 .grid_14 { width: 810px; }
+	.container_16 .grid_15 { width: 870px; }
+	.container_16 .grid_16 { width: 930px; }
+
+	/* Prefix Extra Space >> 16 Columns */
+	.container_16 .prefix_1 { padding-left: 60px; }
+	.container_16 .prefix_2 { padding-left: 120px; }
+	.container_16 .prefix_3 { padding-left: 180px; }
+	.container_16 .prefix_4 { padding-left: 240px; }
+	.container_16 .prefix_5 { padding-left: 300px; }
+	.container_16 .prefix_6 { padding-left: 360px; }
+	.container_16 .prefix_7 { padding-left: 420px; }
+	.container_16 .prefix_8 { padding-left: 480px; }
+	.container_16 .prefix_9 { padding-left: 540px; }
+	.container_16 .prefix_10 { padding-left: 600px; }
+	.container_16 .prefix_11 { padding-left: 660px; }
+	.container_16 .prefix_12 { padding-left: 720px; }
+	.container_16 .prefix_13 { padding-left: 780px; }
+	.container_16 .prefix_14 { padding-left: 840px; }
+	.container_16 .prefix_15 { padding-left: 900px; }
+
+	/* Suffix Extra Space >> 16 Columns */
+	.container_16 .suffix_1 { padding-right: 60px; }
+	.container_16 .suffix_2 { padding-right: 120px; }
+	.container_16 .suffix_3 { padding-right: 180px; }
+	.container_16 .suffix_4 { padding-right: 240px; }
+	.container_16 .suffix_5 { padding-right: 300px; }
+	.container_16 .suffix_6 { padding-right: 360px; }
+	.container_16 .suffix_7 { padding-right: 420px; }
+	.container_16 .suffix_8 { padding-right: 480px; }
+	.container_16 .suffix_9 { padding-right: 540px; }
+	.container_16 .suffix_10 { padding-right: 600px; }
+	.container_16 .suffix_11 { padding-right: 660px; }
+	.container_16 .suffix_12 { padding-right: 720px; }
+	.container_16 .suffix_13 { padding-right: 780px; }
+	.container_16 .suffix_14 { padding-right: 840px; }
+	.container_16 .suffix_15 { padding-right: 900px; }
+
+	/* Push Space >> 16 Columns */
+	.container_16 .push_1 { left: 60px; }
+	.container_16 .push_2 { left: 120px; }
+	.container_16 .push_3 { left: 180px; }
+	.container_16 .push_4 { left: 240px; }
+	.container_16 .push_5 { left: 300px; }
+	.container_16 .push_6 { left: 360px; }
+	.container_16 .push_7 { left: 420px; }
+	.container_16 .push_8 { left: 480px; }
+	.container_16 .push_9 { left: 540px; }
+	.container_16 .push_10 { left: 600px; }
+	.container_16 .push_11 { left: 660px; }
+	.container_16 .push_12 { left: 720px; }
+	.container_16 .push_13 { left: 780px; }
+	.container_16 .push_14 { left: 840px; }
+	.container_16 .push_15 { left: 900px; }
+
+	/* Pull Space >> 16 Columns */
+	.container_16 .pull_1 { left: -60px; }
+	.container_16 .pull_2 { left: -120px; }
+	.container_16 .pull_3 { left: -180px; }
+	.container_16 .pull_4 { left: -240px; }
+	.container_16 .pull_5 { left: -300px; }
+	.container_16 .pull_6 { left: -360px; }
+	.container_16 .pull_7 { left: -420px; }
+	.container_16 .pull_8 { left: -480px; }
+	.container_16 .pull_9 { left: -540px; }
+	.container_16 .pull_10 { left: -600px; }
+	.container_16 .pull_11 { left: -660px; }
+	.container_16 .pull_12 { left: -720px; }
+	.container_16 .pull_13 { left: -780px; }
+	.container_16 .pull_14 { left: -840px; }
+	.container_16 .pull_15 { left: -900px; }
+
+
+
+/*===== Page Common Lay-Out =====*/	
+
+/* Default Background is white */
+body { background: #131313; }
+	body.no-overflow { overflow-x: hidden; }
+
+
+/* Content Body Layout */
+#header { padding: 0; margin: 0; position: relative; top: 0; left: 0; height: 130px; width: 100%; }
+
+	#header-bar { min-width: 900px; height: 100px; padding: 15px 30px; margin: 0; position: relative; } 
+	#header-bar #title { color:#fff; text-transform: uppercase; font-size:30px; line-height: 30px; position: absolute; left: 30px; top: 20px; margin: 0; padding: 0; font-family: 'Nimbus Sans'; }
+
+	#nav { position: absolute; right: 30px; top: 30px; margin: 0; padding: 0; }
+		#nav li { display: block; float: left; width: auto; margin: 0; padding: 0; text-align: center;  }
+		#nav a { display: block; text-decoration: none; font-size: 14px; margin: 0; padding: 0 15px; font-family: 'Nimbus Sans'; text-transform: uppercase; }
+
+		#nav li.active a {  }
