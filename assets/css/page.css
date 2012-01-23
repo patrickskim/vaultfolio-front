@@ -1,3 +1,15 @@
 #container { position: relative; margin: 0 auto; }
 
+
+#stage { position: absolute; left: 30px; }
+
+
+
+#sidebar { width: 300px; position: absolute; right: 30px; }
+
+
+
+	.quote { font-size: 18px; }
+	.user { }
+		.user .name { color:#fff; font-size: 16px; }
 	

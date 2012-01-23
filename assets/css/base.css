@@ -199,10 +199,11 @@ body { background: #131313; }
 #header { padding: 0; margin: 0; position: relative; top: 0; left: 0; height: 130px; width: 100%; }
 
 	#header-bar { min-width: 900px; height: 100px; padding: 15px 30px; margin: 0; position: relative; } 
-	#header-bar #title { color:#fff; text-transform: uppercase; font-size:30px; line-height: 30px; position: absolute; left: 30px; top: 20px; margin: 0; padding: 0; font-family: 'Nimbus Sans'; }
+	#header-bar #title { color:#fff; text-transform: uppercase; font-size:30px; line-height: 30px; position: absolute; left: 30px; top: 20px; margin: 0; padding: 0; font-family: 'Keep Calm'; }
 
 	#nav { position: absolute; right: 30px; top: 30px; margin: 0; padding: 0; }
 		#nav li { display: block; float: left; width: auto; margin: 0; padding: 0; text-align: center;  }
-		#nav a { display: block; text-decoration: none; font-size: 14px; margin: 0; padding: 0 15px; font-family: 'Nimbus Sans'; text-transform: uppercase; }
+		#nav a { display: block; text-decoration: none; font-size: 13px; margin: 0; padding: 0 15px;
+			letter-spacing: 2px; font-family: 'Keep Calm'; text-transform: uppercase; }
 
 		#nav li.active a {  }
